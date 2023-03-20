@@ -29,3 +29,26 @@ int main() {
 
 	}
 }
+
+//========================================================================================================
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main() {
+	int heru, ausar, auset, res1, res2, res3 = 0;
+
+	for (;;) {
+
+		scanf("%d %d %d", &heru, &ausar, &auset);
+		if (heru == 0 && ausar == 0 && auset == 0) break;
+
+
+		res1 = heru * heru, res2 = ausar * ausar, res3 = auset * auset;
+		
+		if (res1 + res2 == res3 || res2 + res3 == res1 || res1 + res3 == res2) {
+			printf("right\n");
+		}
+		else printf("wrong\n");
+	}
+}
