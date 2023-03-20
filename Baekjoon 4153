@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main() {
+	int heru, ausar, auset, max = 0;
+
+	for (;;) {
+
+		scanf("%d %d %d", &heru, &ausar, &auset);
+		if (heru == 0 && ausar == 0 && auset == 0) break;
+
+		if (heru >= ausar && heru >= auset) {
+			if (heru * heru - ausar * ausar - auset * auset == 0) {
+				printf("right\n");
+			}
+			else printf("wrong\n");
+		}
+		else if (ausar >= heru && ausar >= auset) {
+			if (ausar * ausar - heru * heru - auset * auset == 0) {
+				printf("right\n");
+			}
+			else printf("wrong\n");
+		}
+		else {
+			if (auset * auset - heru * heru - ausar * ausar == 0) {
+				printf("right\n");
+			}
+			else printf("wrong\n");
+		}
+
+	}
+}
